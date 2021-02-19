@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>
+        Home page of IPL
+    </title>
+    <style>
+        .Home {
+           
+          
+         
+          text-align: center;
+         height: 825px;
+        }
+        .Home h1 a{
+            color: rgb(207, 250, 17);font-size: xxx-large;
+            
+        }
+        #vid {
+
+margin-top: 10px;
+height: 250px;
+width: 304px;
+border: 5px solid #b1f514;
+box-sizing: border-box;
+}
+#vid1 {
+
+margin-top: 10px;
+height: 7s0px;
+width: 304px;
+border: 5px solid#b1f514;
+box-sizing: border-box;
+}
+        </style>
+    
+</head>
+
+    <body style="background-color: aqua;">
+      
+        
+
+      
+        
+  <div class="Home">
+    <nav aria-label="breadcrum">
+      <ol class="breadcrum">
+       <h1  class="breadcrum-item"><a href="index.html">Home Page</a></h1>
+        
+      </ol>
+
+
+
+
+    </nav>
+    
+        <h1 > 
+            <svg width="100" height="100" style="border:5px solid rgb(253, 3, 3)">
+                <circle cx="50" cy="50" r="40" fill="green" stroke="white" stroke-width="2"/>
+           
+           </h1>
+           <video id="vid" width="320px" height="240px" controls autoplay>
+            <source src="sample.mp4" type="video/mp4">
+            
+            
+          </video><br><br>
+          <audio  id="vid1"controls>
+            
+            <source src="audio.mp3" type="audio/mpeg">
+         
+          </audio>
+           <h1>
+               <i><b><a href="html2.html" > Click here to see the Points Table</a></b></i><br><br>
+               <i><b><a href="htmlclass1.html" > Click here to see the Summary</a></b></i><br><br><br><br>
+               <i><b>Contact Us: &nbsp Phone:222-888-999 &nbsp&nbspEmail :global_IPL@gmail.com</b></i>
+              </h1>
+              
+                
+               
+              </video>
+             
+            </div>
+            <br>
+            <div class="h">
+              <h1 style="text-align: left; font-size: xxx-large; color: rgb(14, 13, 13);"><i>Track the location</i></h1>
+            <button onclick="getLocation()" >Get Location</button>
+            <div id="output"></div><br>
+
+            <script>
+                    src="http://code.jquery.com/jquery-2.2.4.min.js"
+            </script>
+        
+          <script>  var x=document.getElementById('output');
+            function getLocation()
+                {
+                    if(navigator.geolocation){
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    }
+                    else{
+                        x.innerHTML="Browser not supporting";
+                    }
+                }
+                function showPosition(position)
+                {
+                    x.innerHTML="Latitude= "+position.coords.latitude;
+                    x.innerHTML+="<br/>"
+                    x.innerHTML+="Longitude= "+position.coords.longitude;
+                }
+            
+            </script>
+            </div>
+            
+       
+    </body>
+
+   
+
+
+
+</html>

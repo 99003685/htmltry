@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript
+    </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .centre {
+            border-radius: 5px;
+            background-color: #f7d127;
+            padding: 20px;
+            height: 650px;
+            width: 400px;
+
+            margin-left: 27rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        input[type=date],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        input[type=time],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var y = (document.getElementById("txt1").value);
+            var z = (document.getElementById("txt2").value);
+
+            var scoreA = y.split('/');
+            var scoreB = z.split('/');
+            var a = parseInt(scoreA[0]);
+            var b = parseInt(scoreB[0]);
+            if (a > b) {
+                document.getElementById("result").innerHTML = document.getElementById("one").value;
+            }
+            else { document.getElementById("result").innerHTML = document.getElementById("two").value; }
+            }
+    </script>
+</head>
+
+<body>
+
+    <nav aria-label="breadcrum">
+        <ol class="breadcrum">
+            <h1 class="breadcrum-item"><a href="index.html">Home Page</a></h1>
+        </ol>
+    </nav>
+    <div class="centre">
+        <br>
+        <h1 style="text-align: center; ">Match Summary</h1>
+        <div class="middle">
+                Team A<input id="one" type="text" pattern="[A-Za-z]+"><br>
+                Team B<input id="two" type="text" pattern="[A-Za-z]+"><br>
+                Date<input type="date"><br>
+                &nbsp;Time &nbsp;<input type="time"><br>
+                Team A Score<input id="txt1" type="text" pattern="([0-9]{1,3}[/][0-9])"><br>
+                Team B Score<input id="txt2" type="text" pattern="([0-9]{1,3}[/][0-9])"><br>
+
+                <button onclick="myFunction()">Save</button>
+                <p id="result">
+                </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

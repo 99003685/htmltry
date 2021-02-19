@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript
+        </title>
+       <style>
+.centre{
+    border-radius: 5px;
+            background-color: #ebadd8;
+            padding: 20px;
+            height: 330px;
+            width: 500px;
+            border: 1px solid#111110;
+box-sizing: border-box;
+
+margin-left: 27rem;
+margin-top: 127px;
+}
+input[type=text],
+        select,
+        textarea {
+            width: 60%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+    
+
+       </style>
+       <script>
+        function myFunction() {
+        var y =(document.getElementById("txt1").value);
+        
+        var match = y.split(',');
+        var sum=0;
+        var i;
+        console.log(match)
+        sum=parseInt(match[0])*1+parseInt(match[1])*2+parseInt(match[2])*3+parseInt(match[3])*4+parseInt(match[4])*6
+        document.getElementById("result").innerHTML = sum;
+        }
+        </script>
+        
+    </head>
+    <body>
+        <nav aria-label="breadcrum">
+            <ol class="breadcrum">
+             <h1 class="breadcrum-item"><a href="index.html">Home Page</a></h1>
+             
+            </ol>
+      
+      
+      
+      
+          </nav>
+        <div class="centre">
+<br><h1 style="text-align: center; ">Score Meter</h1>
+<h6 style="text-align: center;">(Enter the number of singles,doubles,triples,fours and sixes in comma separated format)      </h6>
+Enter the score details : &nbsp;<input id="txt1" type="text"><br><br>
+<button onclick="myFunction()" style="margin-left: 220px;">Get Score</button>
+<p style="margin-left: 220px;">Total Score</p>
+<p id="result" style="margin-left: 240px;"></p>
+        </div>
+
+    </body>
+</html>

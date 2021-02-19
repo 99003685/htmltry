@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wincal.css">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .centre {
+            border-radius: 5px;
+            background-color: #f7d127;
+            padding: 20px;
+            height: 650px;
+            width: 400px;
+
+margin-left: 27rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        input[type=date],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        input[type=time],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+      
+
+    </style>
+    <script>
+        function myfunc(){
+            var teamn1 = document.forms["form"]["teamA"].value;
+            var teamn2=document.forms["form"]["teamB"].value;
+            var team1 = document.forms["form"]["scoreA"].value;
+            var team2=document.forms["form"]["scoreB"].value;
+            var a=team1.split("/");
+            var b=team2.split("/");
+            console.log(a);
+            var score1=parseInt(a[0]);
+            var score2=parseInt(b[0]);
+            if(score1>score2){
+                document.getElementsByTagName("p")[0].innerHTML=teamn1;
+            }
+            else{
+                document.getElementsByTagName("p")[0].innerHTML=teamn2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav aria-label="breadcrum">
+        <ol class="breadcrum">
+         <h1 class="breadcrum-item"><a href="index.html">Home Page</a></h1>
+         
+        </ol>
+  
+  
+  
+  
+      </nav>
+      <div class="centre">
+    <h1>Match summary</h1>
+    <form name="form" onsubmit="myfunc(); return false;">
+    Team A <span class ="required">*</span> <input type="text" name="teamA" placeholder="Team A" pattern="[A-Za-z]+">
+    
+    Team B <span class ="required">*</span> <input type="text" name="teamB" placeholder="TeamB"  pattern="[A-Za-z]+">
+    Date:  <span class ="required">*</span> <input type="date" name="date"> 
+    Time:  <span class ="required">*</span> <input type="time" name="time" > 
+    Team A score <span class ="required">*</span> <input type="scoreA" name="scoreA" placeholder="runs/wicket"  pattern="([0-9]{1,3}[/][0-9])"><br>
+     Team B score <span class ="required">*</span> <input type="scoreB" name="scoreB" placeholder="runs/wicket"  pattern="([0-9]{1,3}[/][0-9])">
+    <input type="submit" value="submit">
+</div>
+    
+
+
+Winning team:
+</form>
+</body>
+</html>
